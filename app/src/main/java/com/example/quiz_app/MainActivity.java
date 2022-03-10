@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button falseButton;
     private Button trueButton;
     private TextView questionTextView;
@@ -21,18 +21,13 @@ public class MainActivity extends AppCompatActivity {
         trueButton = findViewById(R.id.true_button);
         questionTextView = findViewById(R.id.andswer_text_view);
 
-        falseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        falseButton.setOnClickListener(this);
+        trueButton.setOnClickListener(this);
 
-            }
-        });
+    }
 
-        trueButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    @Override
+    public void onClick(View v) {
 
-            }
-        });
     }
 }
