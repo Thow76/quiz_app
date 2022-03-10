@@ -15,5 +15,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        falseButton = findViewById(R.id.false_button);
+        trueButton = findViewById(R.id.true_button);
+        questionTextView = findViewById(R.id.andswer_text_view);
     }
 }
